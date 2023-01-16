@@ -22,24 +22,27 @@ int main()
     cout << "[4] Print the stack's length\n";
     cin >> option;
 
-    if (option == 1)
+    switch (option)
     {
+    case 0:
+      break;
+    case 1:
       cout << "Type the element to be inserted: ";
       cin >> item;
       stack1.push(item);
-    }
-    else if (option == 2)
-    {
+      break;
+    case 2:
       item = stack1.pop();
       cout << "Deleted element: " << item << endl;
-    }
-    else if (option == 3)
-    {
+      break;
+    case 3:
       stack1.print();
-    }
-    else if (option == 4)
-    {
+    case 4:
       cout << "The stack's lengths is " << stack1.length() << endl;
+      break;
+    default:
+      cout << "Invalid option!\n";
+      break;
     }
 
     cout << endl;
